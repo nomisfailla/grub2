@@ -30,12 +30,13 @@ grub_install_register_ieee1275 (int is_prep, const char *install_device,
   grub_util_error ("%s", _("no IEEE1275 routines are available for your platform"));
 }
 
-void
+int
 grub_install_register_efi (grub_device_t efidir_grub_dev,
 			   const char *efifile_path,
 			   const char *efi_distributor)
 {
   grub_util_error ("%s", _("no EFI routines are available for your platform"));
+  return 0;
 }
 
 void

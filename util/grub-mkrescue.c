@@ -640,7 +640,7 @@ main (int argc, char *argv[])
 						 "i386-pc", 0);
 	      sz = ftello (sa);
 	      fflush (sa);
-	      grub_util_fd_sync (fileno (sa));
+	      grub_util_fd_sync ((grub_util_fd_t)fileno (sa));
 	      fclose (sa);
 	      
 	      if (sz > 32768)
